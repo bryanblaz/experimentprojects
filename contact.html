@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" type="x-icon" href="photos/smallfavion.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Experiment Projects®</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header class="nav">
+    <nav aria-label="Main">
+      <details class="brands">
+        <summary>Our Brands</summary>
+        <ul>
+          <li><a href="https://ragrugz.com" target="_blank" rel="noopener">RagRugz</a></li>
+          <li><a href="https://feeldapper.com" target="_blank" rel="noopener">Feel Dapper</a></li>
+          <li><a href="https://poptheballoon.games" target="_blank" rel="noopener">Pop The Balloon App</a></li>
+        </ul>
+      </details>
+
+      <a class="nav-link" href="about.html">About Us</a>
+      <a class="nav-link is-active" href="contact.html">Contact Us</a>
+      <a class="nav-link" href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="center narrow">
+    <h1 class="brand">
+      <a href="index.html">
+        <img src="photos/ExperimentProjects.png" alt="Experiment Projects">
+      </a>
+    </h1>
+    <p></p>
+
+    <form class="contact" action="#" method="post" onsubmit="return false">
+      <label>
+        <span>Name</span>
+        <input type="text" name="name" placeholder="Your name" required />
+      </label>
+
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" placeholder="you@example.com" required />
+      </label>
+
+      <label>
+        <span>Message</span>
+        <textarea name="message" rows="5" placeholder="Say hello…" required></textarea>
+      </label>
+
+      <button type="submit" class="btn">Send</button>
+
+      <p class="tiny">
+        Prefer email? <a href="mailto:hello@experiment.projects">hello@experiment.projects</a>
+      </p>
+    </form>
+  </main>
+</body>
+</html>

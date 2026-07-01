@@ -1,0 +1,166 @@
+/* Minimal, screenshot-faithful aesthetics */
+:root{
+  --bg:#000;
+  --fg:#eaeaea;
+  --muted:#bfbfbf;
+  --accent:#fff;
+  /* playful letter colors */
+  --c1:#ffb347; --c2:#56c1ff; --c3:#ff5b5b; --c4:#ffde59; --c5:#6bd36b;
+  --c6:#56c1ff; --c7:#ff9ecd; --c8:#56c1ff; --c9:#ffb347; --c10:#ffa200;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font:14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+/* top nav */
+.nav{
+  position:fixed;
+  top:18px;
+  left:0; right:0;
+  display:flex;
+  justify-content:center;
+  pointer-events:none; /* only links should capture */
+}
+.nav nav{display:flex; gap:28px; align-items:flex-start; pointer-events:auto}
+.nav-link, .brands > summary{
+  color:var(--fg);
+  text-decoration:none;
+  font-size:12px;
+  opacity:.9;
+  cursor:pointer;
+}
+.nav-link:hover, .brands > summary:hover,
+.nav-link.is-active{opacity:1; text-decoration:underline}
+
+/* dropdown */
+details.brands{
+  position:relative;
+  user-select:none;
+}
+details.brands > summary{
+  list-style:none;
+}
+details.brands[open] > summary{opacity:1}
+details.brands ul{
+  position:absolute;
+  top:20px;
+  left:0;
+  background:#0e0e0e;
+  border:1px solid #1f1f1f;
+  border-radius:6px;
+  padding:6px 0;
+  min-width:160px;
+  box-shadow:0 10px 30px rgba(0,0,0,.6);
+  display:none;
+  z-index:5;
+}
+details.brands[open] ul{display:block}
+details.brands li{list-style:none}
+details.brands a{
+  display:block;
+  padding:6px 10px;
+  color:var(--muted);
+  text-decoration:none;
+  font-size:12px;
+}
+details.brands a:hover{color:var(--fg); background:#151515}
+
+/* center stage */
+.center{
+  min-height:100%;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:64px 16px 32px;
+}
+.center.narrow{place-items:start center; padding-top:120px; max-width:760px; margin:0 auto}
+
+.brand{
+  margin:0;
+  letter-spacing:2px;
+  font-weight:700;
+  font-size:48px;
+}
+.brand.small{font-size:36px}
+
+.brand sup{
+  font-size:12px;
+  vertical-align:top;
+  margin-left:4px;
+  opacity:.9;
+}
+
+/* colored letters to mimic the image */
+.c1{color:var(--c1)} .c2{color:var(--c2)} .c3{color:var(--c3)} .c4{color:var(--c4)} .c5{color:var(--c5)}
+.c6{color:var(--c6)} .c7{color:var(--c7)} .c8{color:var(--c8)} .c9{color:var(--c9)} .c10{color:var(--c10)}
+
+.sub{
+  margin-top:6px;
+  letter-spacing:3px;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* about copy */
+.copy{
+  margin-top:28px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* contact form */
+.contact{
+  margin-top:28px;
+  width:100%;
+  max-width:560px;
+}
+.contact label{display:block; margin-bottom:14px}
+.contact label span{display:block; font-size:12px; color:var(--muted); margin-bottom:6px}
+.contact input, .contact textarea{
+  width:100%;
+  padding:10px 12px;
+  background:#0f0f0f;
+  border:1px solid #1f1f1f;
+  color:var(--fg);
+  border-radius:8px;
+  outline:none;
+}
+.contact input:focus, .contact textarea:focus{border-color:#3a3a3a}
+.btn{
+  display:inline-block;
+  padding:10px 14px;
+  background:#141414;
+  color:var(--fg);
+  border:1px solid #262626;
+  border-radius:8px;
+  cursor:pointer;
+}
+.btn:hover{background:#1a1a1a}
+.tiny{font-size:11px; color:var(--muted); margin-top:8px}
+
+/* mobile tweaks */
+@media (max-width:520px){
+  .brand{font-size:38px}
+  .brand.small{font-size:30px}
+  .nav nav{gap:18px}
+}
+
+.brand img {
+  width: 500px;      /* adjust this number for your preferred size */
+  height: auto;      /* maintains proportions */
+  display: block;
+  margin: 0 auto;
+}
+
+/* optional responsive tweak for mobile */
+@media (max-width: 600px) {
+  .brand img {
+    width: 240px;
+  }
+}
