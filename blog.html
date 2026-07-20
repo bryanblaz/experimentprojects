@@ -6,7 +6,7 @@
   <link
     rel="shortcut icon"
     type="image/x-icon"
-    href="photos/smallfavion.png"
+    href="/photos/smallfavion.png"
   />
 
   <meta
@@ -21,10 +21,26 @@
 
   <title>Blog • Experiment Projects®</title>
 
-  <link rel="stylesheet" href="/styles.css?v=20260720-3" />
+  <link
+    rel="stylesheet"
+    href="/styles.css?v=20260720-4"
+  />
 
-  <script defer src="/script.js?v=20260720-3"></script>
-  <script defer src="/blog.js?v=20260720-3"></script>
+  <script
+    defer
+    src="/script.js?v=20260720-4"
+  ></script>
+
+  <script
+    defer
+    src="/blog.js?v=20260720-4"
+  ></script>
+
+  <!-- Reads Firebase authentication status -->
+  <script
+    type="module"
+    src="/auth-nav.js?v=20260720-1"
+  ></script>
 </head>
 
 <body class="blog-body">
@@ -34,17 +50,19 @@
 
     <a
       class="blog-header-logo"
-      href="index.html"
+      href="/index.html"
       aria-label="Experiment Projects home"
     >
       <img
-        src="ExperimentProjects.png"
+        src="/ExperimentProjects.png"
         alt="Experiment Projects"
       />
     </a>
 
-    <nav class="blog-nav" aria-label="Blog navigation">
-
+    <nav
+      class="blog-nav"
+      aria-label="Blog navigation"
+    >
       <details class="brands">
         <summary>Our Brands</summary>
 
@@ -81,24 +99,39 @@
         </ul>
       </details>
 
-      <a class="nav-link" href="articles.html">Articles</a>
+      <a
+        class="nav-link"
+        href="/articles.html"
+      >
+        Articles
+      </a>
 
       <a
         class="nav-link is-active"
-        href="blog.html"
+        href="/blog.html"
         aria-current="page"
       >
         Blog
       </a>
 
-      <a class="nav-link" href="about.html">About Us</a>
-      <a class="nav-link" href="contact.html">Contact Us</a>
+      <a
+        class="nav-link"
+        href="/about.html"
+      >
+        About Us
+      </a>
 
+      <a
+        class="nav-link"
+        href="/contact.html"
+      >
+        Contact Us
+      </a>
     </nav>
 
   </header>
 
-  <!-- Only this section scrolls -->
+  <!-- Only this area scrolls -->
   <main class="blog-scroll-area">
 
     <section class="blog-container">
@@ -118,15 +151,31 @@
 
         <div class="blog-actions">
 
-          <a class="blog-action-secondary" href="login.html">
+          <!-- auth-nav.js changes this to Sign Out when logged in -->
+          <a
+            id="blogAuthButton"
+            class="blog-action-secondary"
+            href="/login.html"
+          >
             Sign In
           </a>
 
-          <a class="blog-action-primary" href="create-post.html">
+          <!-- Signed-out users are sent to login first -->
+          <a
+            id="createPostButton"
+            class="blog-action-primary"
+            href="/login.html?next=/create-post.html"
+          >
             Create Post
           </a>
 
         </div>
+
+        <p
+          id="blogAuthStatus"
+          class="blog-auth-status"
+          aria-live="polite"
+        ></p>
 
       </header>
 
@@ -148,7 +197,10 @@
 
         </label>
 
-        <div class="blog-filters">
+        <div
+          class="blog-filters"
+          aria-label="Blog categories"
+        >
 
           <button
             class="blog-filter is-active"
@@ -208,11 +260,16 @@
             <h2>From the community</h2>
           </div>
 
-          <span id="blogPostCount">4 posts</span>
+          <span id="blogPostCount">
+            4 posts
+          </span>
 
         </div>
 
-        <div id="blogFeed" class="blog-feed">
+        <div
+          id="blogFeed"
+          class="blog-feed"
+        >
 
           <!-- Featured post -->
           <article
@@ -229,7 +286,10 @@
             <div class="blog-post-content">
 
               <div class="blog-post-meta">
-                <span class="blog-post-category">Technology</span>
+                <span class="blog-post-category">
+                  Technology
+                </span>
+
                 <span>By Bryan Anderson</span>
                 <span>8 min read</span>
               </div>
@@ -246,14 +306,20 @@
 
               <div class="blog-attachments">
 
-                <a href="#" aria-label="Open attached project PDF">
+                <a
+                  href="#"
+                  aria-label="Open attached project PDF"
+                >
                   PDF
                   <span>project-notes.pdf</span>
                 </a>
 
               </div>
 
-              <a class="blog-read-link" href="blog-post.html?id=featured">
+              <a
+                class="blog-read-link"
+                href="/blog-post.html?id=featured"
+              >
                 Read post
                 <span aria-hidden="true">→</span>
               </a>
@@ -262,6 +328,7 @@
 
           </article>
 
+          <!-- Business post -->
           <article
             class="blog-post"
             data-blog-post
@@ -272,12 +339,14 @@
             <div class="blog-post-content">
 
               <div class="blog-post-meta">
+
                 <span class="blog-post-category category-business">
                   Business
                 </span>
 
                 <span>By Experiment Projects</span>
                 <span>5 min read</span>
+
               </div>
 
               <h3>
@@ -290,7 +359,10 @@
                 documentation, and room to grow.
               </p>
 
-              <a class="blog-read-link" href="blog-post.html?id=start-small">
+              <a
+                class="blog-read-link"
+                href="/blog-post.html?id=start-small"
+              >
                 Read post
                 <span aria-hidden="true">→</span>
               </a>
@@ -299,6 +371,7 @@
 
           </article>
 
+          <!-- Creative post -->
           <article
             class="blog-post"
             data-blog-post
@@ -309,12 +382,14 @@
             <div class="blog-post-content">
 
               <div class="blog-post-meta">
+
                 <span class="blog-post-category category-creative">
                   Creative
                 </span>
 
                 <span>By Community Author</span>
                 <span>4 min read</span>
+
               </div>
 
               <h3>
@@ -341,7 +416,10 @@
 
               </div>
 
-              <a class="blog-read-link" href="blog-post.html?id=human-design">
+              <a
+                class="blog-read-link"
+                href="/blog-post.html?id=human-design"
+              >
                 Read post
                 <span aria-hidden="true">→</span>
               </a>
@@ -350,6 +428,7 @@
 
           </article>
 
+          <!-- Community post -->
           <article
             class="blog-post"
             data-blog-post
@@ -360,12 +439,14 @@
             <div class="blog-post-content">
 
               <div class="blog-post-meta">
+
                 <span class="blog-post-category category-community">
                   Community
                 </span>
 
                 <span>By Experiment Projects</span>
                 <span>3 min read</span>
+
               </div>
 
               <h3>
@@ -378,7 +459,10 @@
                 still evolving.
               </p>
 
-              <a class="blog-read-link" href="blog-post.html?id=welcome">
+              <a
+                class="blog-read-link"
+                href="/blog-post.html?id=welcome"
+              >
                 Read post
                 <span aria-hidden="true">→</span>
               </a>
@@ -389,11 +473,18 @@
 
         </div>
 
-        <div id="emptyBlogPosts" class="empty-blog-posts" hidden>
+        <div
+          id="emptyBlogPosts"
+          class="empty-blog-posts"
+          hidden
+        >
 
           <p>No blog posts matched your search.</p>
 
-          <button id="clearBlogSearch" type="button">
+          <button
+            id="clearBlogSearch"
+            type="button"
+          >
             Clear search
           </button>
 
@@ -408,10 +499,12 @@
         </p>
 
         <nav aria-label="Blog footer navigation">
-          <a href="index.html">Home</a>
-          <a href="articles.html">Articles</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+
+          <a href="/index.html">Home</a>
+          <a href="/articles.html">Articles</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+
         </nav>
 
       </footer>
