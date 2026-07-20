@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="/photos/smallfavion.png"
+  />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="Sign in or create an Experiment Projects Blog account."
+  />
+
+  <title>Sign In • Experiment Projects®</title>
+
+  <link rel="stylesheet" href="/styles.css?v=20260720-4" />
+
+  <script defer src="/script.js?v=20260720-4"></script>
+  <script type="module" src="/auth.js?v=20260720-1"></script>
+</head>
+
+<body class="blog-body">
+
+  <header class="blog-fixed-header">
+
+    <a
+      class="blog-header-logo"
+      href="/index.html"
+      aria-label="Experiment Projects home"
+    >
+      <img
+        src="/ExperimentProjects.png"
+        alt="Experiment Projects"
+      />
+    </a>
+
+    <nav class="blog-nav" aria-label="Main navigation">
+
+      <a class="nav-link" href="/index.html">Home</a>
+      <a class="nav-link" href="/articles.html">Articles</a>
+      <a class="nav-link" href="/blog.html">Blog</a>
+      <a class="nav-link" href="/about.html">About Us</a>
+      <a class="nav-link" href="/contact.html">Contact Us</a>
+
+    </nav>
+
+  </header>
+
+  <main class="blog-scroll-area">
+
+    <section class="auth-shell">
+
+      <header class="auth-intro">
+
+        <p class="blog-kicker">
+          Experiment Projects Blog
+        </p>
+
+        <h1 id="authHeading">Welcome back.</h1>
+
+        <p id="authDescription">
+          Sign in to write, upload files, and manage your blog posts.
+        </p>
+
+      </header>
+
+      <section class="auth-panel">
+
+        <div
+          class="auth-mode-switch"
+          role="tablist"
+          aria-label="Account options"
+        >
+
+          <button
+            id="showSignIn"
+            class="auth-mode-button is-active"
+            type="button"
+            data-auth-mode="signin"
+            aria-selected="true"
+          >
+            Sign In
+          </button>
+
+          <button
+            id="showSignUp"
+            class="auth-mode-button"
+            type="button"
+            data-auth-mode="signup"
+            aria-selected="false"
+          >
+            Create Account
+          </button>
+
+        </div>
+
+        <form id="authForm" class="auth-form">
+
+          <label id="nameField" class="auth-field" hidden>
+            <span>Display name</span>
+
+            <input
+              id="displayName"
+              type="text"
+              maxlength="60"
+              autocomplete="name"
+              placeholder="Your name"
+            />
+          </label>
+
+          <label class="auth-field">
+            <span>Email address</span>
+
+            <input
+              id="email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            />
+          </label>
+
+          <label class="auth-field">
+            <span>Password</span>
+
+            <input
+              id="password"
+              type="password"
+              minlength="8"
+              autocomplete="current-password"
+              placeholder="Enter your password"
+              required
+            />
+          </label>
+
+          <button
+            id="authSubmit"
+            class="blog-action-primary auth-submit"
+            type="submit"
+          >
+            Sign In
+          </button>
+
+        </form>
+
+        <div class="auth-divider">
+          <span>or</span>
+        </div>
+
+        <button
+          id="googleSignIn"
+          class="auth-google-button"
+          type="button"
+        >
+          Continue with Google
+        </button>
+
+        <p
+          id="authMessage"
+          class="auth-message"
+          role="status"
+          aria-live="polite"
+        ></p>
+
+      </section>
+
+      <p class="auth-return">
+        <a href="/blog.html">← Return to the blog</a>
+      </p>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
