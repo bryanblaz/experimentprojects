@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="photos/smallfavion.png"
+  />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="Articles from Experiment Projects covering app development, IT support, business building, technology, and independent product development."
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <title>Articles • Experiment Projects®</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body class="articles-body">
+  <header class="nav">
+    <nav aria-label="Main navigation">
+      <details class="brands">
+        <summary>Our Brands</summary>
+
+        <ul>
+          <li>
+            <a
+              href="https://ragrugz.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              RagRugz
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://feeldapper.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Feel Dapper
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://poptheballoon.games/home.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              PTB: Center Stage
+            </a>
+          </li>
+        </ul>
+      </details>
+
+      <a
+        class="nav-link is-active"
+        href="articles.html"
+        aria-current="page"
+      >
+        Articles
+      </a>
+
+      <a class="nav-link" href="about.html">About Us</a>
+      <a class="nav-link" href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main class="articles-shell">
+    <section class="articles-hero">
+      <a
+        class="articles-logo"
+        href="index.html"
+        aria-label="Experiment Projects home"
+      >
+        <img
+          src="ExperimentProjects.png"
+          alt="Experiment Projects"
+        />
+      </a>
+
+      <p class="articles-eyebrow">Experiment Projects Journal</p>
+
+      <h1>Ideas worth building.</h1>
+
+      <p class="articles-intro">
+        Original articles about developing applications, solving technology
+        problems, launching businesses, and turning unfinished ideas into
+        working products.
+      </p>
+    </section>
+
+    <section
+      class="articles-tools"
+      aria-label="Search and filter articles"
+    >
+      <div class="article-search">
+        <label for="articleSearch">Search articles</label>
+
+        <input
+          id="articleSearch"
+          type="search"
+          placeholder="Search by title, subject, or keyword..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="category-filters" aria-label="Article categories">
+        <button
+          class="category-filter is-active"
+          type="button"
+          data-filter="all"
+          aria-pressed="true"
+        >
+          All Articles
+        </button>
+
+        <button
+          class="category-filter"
+          type="button"
+          data-filter="app-development"
+          aria-pressed="false"
+        >
+          App Development
+        </button>
+
+        <button
+          class="category-filter"
+          type="button"
+          data-filter="it-support"
+          aria-pressed="false"
+        >
+          IT Support
+        </button>
+
+        <button
+          class="category-filter"
+          type="button"
+          data-filter="business-building"
+          aria-pressed="false"
+        >
+          Business Building
+        </button>
+      </div>
+    </section>
+
+    <section class="featured-section" aria-labelledby="featuredHeading">
+      <div class="section-heading">
+        <p>Featured</p>
+        <h2 id="featuredHeading">Inside the experiment</h2>
+      </div>
+
+      <article
+        class="featured-article"
+        data-article-card
+        data-category="app-development"
+        data-search="how i built ptb center stage flutterflow firebase revenuecat ios android app development"
+      >
+        <div class="featured-copy">
+          <div class="article-meta">
+            <span class="article-category category-app">
+              App Development
+            </span>
+
+            <span>Case study</span>
+            <span>12 min read</span>
+          </div>
+
+          <h3>How I Built PTB: Center Stage</h3>
+
+          <p>
+            A behind-the-scenes look at designing, developing, testing, and
+            publishing a cross-platform mobile application using FlutterFlow,
+            Firebase, Firestore, Cloud Functions, RevenueCat, Apple App Store
+            Connect, and Google Play Console.
+          </p>
+
+          <a
+            class="read-article-link"
+            href="https://github.com/bryanblaz/pop-the-balloon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View the project on GitHub
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="featured-art" aria-hidden="true">
+          <div class="featured-window">
+            <div class="window-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="window-content">
+              <div class="code-line code-line-long"></div>
+              <div class="code-line code-line-medium"></div>
+              <div class="code-line code-line-short"></div>
+              <div class="code-line code-line-long"></div>
+              <div class="code-line code-line-medium"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Add your AdSense unit here after approval. -->
+    <!--
+    <aside class="article-ad" aria-label="Advertisement">
+      Your Google AdSense code goes here.
+    </aside>
+    -->
+
+    <section class="latest-section" aria-labelledby="latestHeading">
+      <div class="section-heading section-heading-row">
+        <div>
+          <p>The Journal</p>
+          <h2 id="latestHeading">Latest articles</h2>
+        </div>
+
+        <span id="articleCount" class="article-count">6 articles</span>
+      </div>
+
+      <div class="articles-grid">
+        <article
+          class="article-card"
+          data-article-card
+          data-category="app-development"
+          data-search="apple app review approval rejection app store ios publishing ptb center stage"
+        >
+          <div class="article-card-top">
+            <span class="article-number">01</span>
+
+            <span class="article-category category-app">
+              App Development
+            </span>
+          </div>
+
+          <h3>What Apple App Review Taught Me</h3>
+
+          <p>
+            Practical lessons from handling privacy requirements, location
+            permissions, subscriptions, user-generated content policies,
+            reviewer communication, and repeated submissions.
+          </p>
+
+          <div class="article-card-footer">
+            <span>Coming soon</span>
+            <span>10 min read</span>
+          </div>
+        </article>
+
+        <article
+          class="article-card"
+          data-article-card
+          data-category="app-development"
+          data-search="revenuecat subscription purchases ios android flutterflow entitlements paywall"
+        >
+          <div class="article-card-top">
+            <span class="article-number">02</span>
+
+            <span class="article-category category-app">
+              App Development
+            </span>
+          </div>
+
+          <h3>Fixing RevenueCat Purchases Across iOS and Android</h3>
+
+          <p>
+            How product identifiers, entitlements, offerings, test accounts,
+            Cloud Functions, and store approval statuses work together.
+          </p>
+
+          <div class="article-card-footer">
+            <span>Coming soon</span>
+            <span>9 min read</span>
+          </div>
+        </article>
+
+        <article
+          class="article-card"
+          data-article-card
+          data-category="it-support"
+          data-search="windows automatic repair loop startup repair blue screen troubleshooting help desk"
+        >
+          <div class="article-card-top">
+            <span class="article-number">03</span>
+
+            <span class="article-category category-it">
+              IT Support
+            </span>
+          </div>
+
+          <h3>Troubleshooting a Windows Automatic Repair Loop</h3>
+
+          <p>
+            A direct troubleshooting sequence for diagnosing failed updates,
+            damaged boot records, storage problems, corrupted system files,
+            and recovery failures.
+          </p>
+
+          <div class="article-card-footer">
+            <span>Coming soon</span>
+            <span>7 min read</span>
+          </div>
+        </article>
+
+        <article
+          class="article-card"
+          data-article-card
+          data-category="it-support"
+          data-search="windows 11 deployment checklist computers imaging enterprise help desk desktop support"
+        >
+          <div class="article-card-top">
+            <span class="article-number">04</span>
+
+            <span class="article-category category-it">
+              IT Support
+            </span>
+          </div>
+
+          <h3>A Practical Windows 11 Deployment Checklist</h3>
+
+          <p>
+            A field-tested approach to inventory, backups, imaging,
+            application installation, user validation, deployment records,
+            and post-upgrade support.
+          </p>
+
+          <div class="article-card-footer">
+            <span>Coming soon</span>
+            <span>8 min read</span>
+          </div>
+        </article>
+
+        <article
+          class="article-card"
+          data-article-card
+          data-category="business-building"
+          data-search="experiment projects product lab business brands startup independent developer entrepreneur"
+        >
+          <div class="article-card-top">
+            <span class="article-number">05</span>
+
+            <span class="article-category category-business">
+              Business Building
+            </span>
+          </div>
+
+          <h3>Building Experiment Projects as a Product Lab</h3>
+
+          <p>
+            Why Experiment Projects exists, how its brands fit together, and
+            what it means to operate a company built around testing and
+            shipping original ideas.
+          </p>
+
+          <div class="article-card-footer">
+            <span>Coming soon</span>
+            <span>6 min read</span>
+          </div>
+        </article>
+
+        <article
+          class="article-card"
+          data-article-card
+          data-category="business-building"
+          data-search="launching mobile application costs app store google play firebase revenuecat cloudflare business"
+        >
+          <div class="article-card-top">
+            <span class="article-number">06</span>
+
+            <span class="article-category category-business">
+              Business Building
+            </span>
+          </div>
+
+          <h3>What It Really Costs to Launch an App</h3>
+
+          <p>
+            A realistic breakdown of developer accounts, domains, cloud
+            infrastructure, subscriptions, design tools, testing, marketing,
+            maintenance, and the cost of your own time.
+          </p>
+
+          <div class="article-card-footer">
+            <span>Coming soon</span>
+            <span>11 min read</span>
+          </div>
+        </article>
+      </div>
+
+      <div id="emptyArticles" class="empty-articles" hidden>
+        <p>No articles matched your search.</p>
+        <button id="clearArticleSearch" type="button">
+          Clear search
+        </button>
+      </div>
+    </section>
+
+    <section class="journal-about">
+      <div>
+        <p class="journal-label">About the journal</p>
+
+        <h2>Built from real work—not recycled advice.</h2>
+      </div>
+
+      <p>
+        These articles document projects, mistakes, technical fixes, launches,
+        and lessons learned while building Experiment Projects and its brands.
+        The goal is to show the process clearly enough that someone else can
+        use it.
+      </p>
+    </section>
+  </main>
+
+  <footer class="articles-footer">
+    <p>
+      © <span id="year"></span> Experiment Projects®
+    </p>
+
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </footer>
+</body>
+</html>
