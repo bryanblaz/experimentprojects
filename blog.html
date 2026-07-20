@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="photos/smallfavion.png"
+  />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="The Experiment Projects community blog for ideas, projects, technology, business, and creative work."
+  />
+
+  <title>Blog • Experiment Projects®</title>
+
+  <link rel="stylesheet" href="/styles.css?v=20260720-3" />
+
+  <script defer src="/script.js?v=20260720-3"></script>
+  <script defer src="/blog.js?v=20260720-3"></script>
+</head>
+
+<body class="blog-body">
+
+  <!-- Fixed logo and navigation -->
+  <header class="blog-fixed-header">
+
+    <a
+      class="blog-header-logo"
+      href="index.html"
+      aria-label="Experiment Projects home"
+    >
+      <img
+        src="ExperimentProjects.png"
+        alt="Experiment Projects"
+      />
+    </a>
+
+    <nav class="blog-nav" aria-label="Blog navigation">
+
+      <details class="brands">
+        <summary>Our Brands</summary>
+
+        <ul>
+          <li>
+            <a
+              href="https://ragrugz.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              RagRugz
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://feeldapper.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Feel Dapper
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://poptheballoon.games/home.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              PTB: Center Stage
+            </a>
+          </li>
+        </ul>
+      </details>
+
+      <a class="nav-link" href="articles.html">Articles</a>
+
+      <a
+        class="nav-link is-active"
+        href="blog.html"
+        aria-current="page"
+      >
+        Blog
+      </a>
+
+      <a class="nav-link" href="about.html">About Us</a>
+      <a class="nav-link" href="contact.html">Contact Us</a>
+
+    </nav>
+
+  </header>
+
+  <!-- Only this section scrolls -->
+  <main class="blog-scroll-area">
+
+    <section class="blog-container">
+
+      <header class="blog-intro">
+
+        <p class="blog-kicker">
+          The Experiment Projects Community
+        </p>
+
+        <h1>The Open Notebook.</h1>
+
+        <p class="blog-description">
+          A place for people to share ideas, projects, technical discoveries,
+          business lessons, documents, and unfinished experiments.
+        </p>
+
+        <div class="blog-actions">
+
+          <a class="blog-action-secondary" href="login.html">
+            Sign In
+          </a>
+
+          <a class="blog-action-primary" href="create-post.html">
+            Create Post
+          </a>
+
+        </div>
+
+      </header>
+
+      <section
+        class="blog-controls"
+        aria-label="Search and filter blog posts"
+      >
+
+        <label class="blog-search">
+
+          <span>Search posts</span>
+
+          <input
+            id="blogSearch"
+            type="search"
+            placeholder="Search posts, authors, categories, or keywords..."
+            autocomplete="off"
+          />
+
+        </label>
+
+        <div class="blog-filters">
+
+          <button
+            class="blog-filter is-active"
+            type="button"
+            data-blog-filter="all"
+            aria-pressed="true"
+          >
+            All Posts
+          </button>
+
+          <button
+            class="blog-filter"
+            type="button"
+            data-blog-filter="technology"
+            aria-pressed="false"
+          >
+            Technology
+          </button>
+
+          <button
+            class="blog-filter"
+            type="button"
+            data-blog-filter="business"
+            aria-pressed="false"
+          >
+            Business
+          </button>
+
+          <button
+            class="blog-filter"
+            type="button"
+            data-blog-filter="creative"
+            aria-pressed="false"
+          >
+            Creative
+          </button>
+
+          <button
+            class="blog-filter"
+            type="button"
+            data-blog-filter="community"
+            aria-pressed="false"
+          >
+            Community
+          </button>
+
+        </div>
+
+      </section>
+
+      <section class="blog-feed-section">
+
+        <div class="blog-feed-heading">
+
+          <div>
+            <p>Latest entries</p>
+            <h2>From the community</h2>
+          </div>
+
+          <span id="blogPostCount">4 posts</span>
+
+        </div>
+
+        <div id="blogFeed" class="blog-feed">
+
+          <!-- Featured post -->
+          <article
+            class="blog-post blog-post-featured"
+            data-blog-post
+            data-category="technology"
+            data-search="building applications firebase flutterflow technology app development bryan"
+          >
+
+            <div class="blog-post-image blog-post-image-code">
+              <span>Featured Post</span>
+            </div>
+
+            <div class="blog-post-content">
+
+              <div class="blog-post-meta">
+                <span class="blog-post-category">Technology</span>
+                <span>By Bryan Anderson</span>
+                <span>8 min read</span>
+              </div>
+
+              <h3>
+                What Building a Real Application Actually Teaches You
+              </h3>
+
+              <p>
+                Tutorials explain individual features. Building and launching
+                a complete product teaches architecture, troubleshooting,
+                publishing, privacy, payments, customer support, and patience.
+              </p>
+
+              <div class="blog-attachments">
+
+                <a href="#" aria-label="Open attached project PDF">
+                  PDF
+                  <span>project-notes.pdf</span>
+                </a>
+
+              </div>
+
+              <a class="blog-read-link" href="blog-post.html?id=featured">
+                Read post
+                <span aria-hidden="true">→</span>
+              </a>
+
+            </div>
+
+          </article>
+
+          <article
+            class="blog-post"
+            data-blog-post
+            data-category="business"
+            data-search="small business product launch experiment projects startup company"
+          >
+
+            <div class="blog-post-content">
+
+              <div class="blog-post-meta">
+                <span class="blog-post-category category-business">
+                  Business
+                </span>
+
+                <span>By Experiment Projects</span>
+                <span>5 min read</span>
+              </div>
+
+              <h3>
+                Start Small, but Build Like the Idea Could Become Big
+              </h3>
+
+              <p>
+                Small projects should not be buried under unnecessary systems,
+                but they should still be built with ownership, organization,
+                documentation, and room to grow.
+              </p>
+
+              <a class="blog-read-link" href="blog-post.html?id=start-small">
+                Read post
+                <span aria-hidden="true">→</span>
+              </a>
+
+            </div>
+
+          </article>
+
+          <article
+            class="blog-post"
+            data-blog-post
+            data-category="creative"
+            data-search="design creative visual branding logo art project"
+          >
+
+            <div class="blog-post-content">
+
+              <div class="blog-post-meta">
+                <span class="blog-post-category category-creative">
+                  Creative
+                </span>
+
+                <span>By Community Author</span>
+                <span>4 min read</span>
+              </div>
+
+              <h3>
+                Why Imperfect Design Can Feel More Human
+              </h3>
+
+              <p>
+                Perfect spacing and polished templates can sometimes remove the
+                personality from a project. Controlled imperfection can make a
+                visual identity feel more original and memorable.
+              </p>
+
+              <div class="blog-attachments">
+
+                <a href="#">
+                  DOCX
+                  <span>design-notes.docx</span>
+                </a>
+
+                <a href="#">
+                  PNG
+                  <span>concept-board.png</span>
+                </a>
+
+              </div>
+
+              <a class="blog-read-link" href="blog-post.html?id=human-design">
+                Read post
+                <span aria-hidden="true">→</span>
+              </a>
+
+            </div>
+
+          </article>
+
+          <article
+            class="blog-post"
+            data-blog-post
+            data-category="community"
+            data-search="community ideas contributors experiment projects blog introduction"
+          >
+
+            <div class="blog-post-content">
+
+              <div class="blog-post-meta">
+                <span class="blog-post-category category-community">
+                  Community
+                </span>
+
+                <span>By Experiment Projects</span>
+                <span>3 min read</span>
+              </div>
+
+              <h3>
+                Welcome to the Experiment Projects Blog
+              </h3>
+
+              <p>
+                This is a space for useful writing, original projects, honest
+                lessons, technical discoveries, documents, and work that is
+                still evolving.
+              </p>
+
+              <a class="blog-read-link" href="blog-post.html?id=welcome">
+                Read post
+                <span aria-hidden="true">→</span>
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+        <div id="emptyBlogPosts" class="empty-blog-posts" hidden>
+
+          <p>No blog posts matched your search.</p>
+
+          <button id="clearBlogSearch" type="button">
+            Clear search
+          </button>
+
+        </div>
+
+      </section>
+
+      <footer class="blog-footer">
+
+        <p>
+          © <span id="year"></span> Experiment Projects®
+        </p>
+
+        <nav aria-label="Blog footer navigation">
+          <a href="index.html">Home</a>
+          <a href="articles.html">Articles</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+      </footer>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
