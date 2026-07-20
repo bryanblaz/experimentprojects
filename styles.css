@@ -227,7 +227,7 @@ details.brands a:focus-visible {
   font-size: 48px;
   font-weight: 700;
   letter-spacing: 2px;
-  transform: translateY(-60px);
+  transform: translateY(-100px);
 }
 .brand.small {
   font-size: 36px;
