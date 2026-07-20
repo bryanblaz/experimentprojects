@@ -222,6 +222,13 @@ details.brands a:focus-visible {
   letter-spacing: 2px;
 }
 
+.brand {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transform: translateY(-60px);
+}
 .brand.small {
   font-size: 36px;
 }
