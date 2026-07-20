@@ -1932,3 +1932,46 @@ details.brands a:focus-visible {
     letter-spacing: -3px;
   }
 }
+
+/* =========================================================
+   ARTICLES PAGE NAVIGATION FIX
+   Keeps the Articles content below the navigation bar.
+   ========================================================= */
+
+.articles-body > .nav {
+  position: sticky;
+  top: 0;
+  left: auto;
+  right: auto;
+  z-index: 2000;
+
+  width: 100%;
+  min-height: 52px;
+  padding: 16px 14px 12px;
+
+  background: #000;
+  border-bottom: 8px solid #000;
+
+  pointer-events: none;
+}
+
+.articles-body > .nav nav {
+  align-items: center;
+}
+
+.articles-body > .articles-shell {
+  padding-top: 68px;
+}
+
+@media (max-width: 680px) {
+  .articles-body > .nav {
+    top: 0;
+    min-height: 70px;
+    padding-top: 14px;
+    padding-bottom: 12px;
+  }
+
+  .articles-body > .articles-shell {
+    padding-top: 78px;
+  }
+}
