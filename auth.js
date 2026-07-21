@@ -95,7 +95,10 @@ function getSafeRedirect() {
 }
 
 function readableAuthError(error) {
-  switch (error.code) {
+  const code = error?.code ?? "unknown-error";
+  console.error("Firebase Authentication error:", code, error);
+
+  switch (code) {
     case "auth/email-already-in-use":
       return "An account already exists with that email address.";
     case "auth/invalid-email":
@@ -104,6 +107,16 @@ function readableAuthError(error) {
       return "Use a stronger password with at least eight characters.";
     case "auth/invalid-credential":
       return "The email address or password is incorrect.";
+    case "auth/operation-not-allowed":
+      return "Email/password sign-in is not enabled in Firebase Authentication.";
+    case "auth/configuration-not-found":
+      return "Firebase Authentication is not fully configured for this project.";
+    case "auth/unauthorized-domain":
+      return "This website domain is not authorized in Firebase Authentication.";
+    case "auth/invalid-api-key":
+      return "The Firebase API key is invalid or blocked.";
+    case "auth/app-not-authorized":
+      return "This website is not authorized to use the Firebase project.";
     case "auth/popup-closed-by-user":
       return "The Google sign-in window was closed.";
     case "auth/popup-blocked":
@@ -113,8 +126,7 @@ function readableAuthError(error) {
     case "auth/network-request-failed":
       return "The network request failed. Check your connection.";
     default:
-      console.error(error);
-      return "Authentication failed. Please try again.";
+      return `Authentication failed (${code}).`;
   }
 }
 
