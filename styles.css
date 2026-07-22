@@ -1982,3 +1982,43 @@ details.brands a:focus-visible {
     padding-top: 78px;
   }
 }
+
+/* Mobile header height fix */
+@media (max-width: 768px) {
+  header,
+  .nav,
+  .site-header {
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 18px !important;
+    padding-bottom: 16px !important;
+  }
+
+  .brand,
+  .logo,
+  .logo-container {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .brand img,
+  .logo img,
+  header img {
+    width: 150px !important;
+    max-width: 45vw;
+    height: auto !important;
+  }
+
+  header nav,
+  .nav nav {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  header nav ul,
+  .nav nav ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 13px;
+  }
+}
