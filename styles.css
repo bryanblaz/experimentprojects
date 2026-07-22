@@ -1985,40 +1985,47 @@ details.brands a:focus-visible {
 
 /* Mobile header height fix */
 @media (max-width: 768px) {
+  /* Header */
   header,
-  .nav,
-  .site-header {
-    min-height: auto !important;
+  .site-header,
+  .nav {
+    position: relative !important;
     height: auto !important;
-    padding-top: 18px !important;
-    padding-bottom: 16px !important;
+    min-height: 0 !important;
+    padding: 22px 16px 18px !important;
+    overflow: visible !important;
   }
 
-  .brand,
-  .logo,
-  .logo-container {
+  /* Logo */
+  header .brand,
+  header .logo {
+    margin: 0 0 14px !important;
+  }
+
+  header .brand img,
+  header .logo img {
+    width: 145px !important;
+    height: auto !important;
+  }
+
+  /* Navigation */
+  header nav {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hero section under the border */
+  .hero,
+  .blog-hero,
+  .notebook-hero,
+  .hero-section {
+    position: relative !important;
+    top: auto !important;
+    transform: none !important;
     margin-top: 0 !important;
-    margin-bottom: 12px !important;
-  }
-
-  .brand img,
-  .logo img,
-  header img {
-    width: 150px !important;
-    max-width: 45vw;
+    padding-top: 65px !important;
     height: auto !important;
-  }
-
-  header nav,
-  .nav nav {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  header nav ul,
-  .nav nav ul {
-    margin: 0 !important;
-    padding: 0 !important;
-    gap: 13px;
+    min-height: auto !important;
+    overflow: visible !important;
   }
 }
